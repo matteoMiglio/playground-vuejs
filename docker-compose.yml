@@ -1,0 +1,10 @@
+services:
+
+  frontend:
+    image: my-vue-app-image:latest
+    container_name: my-node
+    restart: always
+    volumes:
+      - ./my-vue-app/:/my-vue-app
+    ports:
+      - "3000:5173"
