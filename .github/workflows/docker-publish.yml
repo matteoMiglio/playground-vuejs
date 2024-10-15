@@ -27,7 +27,7 @@ jobs:
       - name: Semver release @ Huggingface
         id: semver
         uses: huggingface/semver-release-action@v1.1.0
-        with: 
+        env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
       - name: Use the new tag
