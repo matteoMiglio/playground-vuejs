@@ -27,6 +27,8 @@ jobs:
       - name: Semver release @ Huggingface
         id: semver
         uses: huggingface/semver-release-action@v1.1.0
+        with: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
       - name: Use the new tag
         run: 'echo "New tag is: ${{ steps.semver.outputs.version }}"'
